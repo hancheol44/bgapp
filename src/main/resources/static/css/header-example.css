@@ -1,0 +1,44 @@
+/* 헤더 시안: 기존 화면과 비교할 수 있도록 별도로 구성했습니다. */
+.alternative-hero { background: #eef8fd; padding: 36px 24px; }
+.alternative-hero-inner { max-width: 1072px; margin: 0 auto; display: grid; grid-template-columns: 1fr 0.85fr; min-height: 340px; overflow: hidden; border: 1px solid #d3e8f2; border-radius: 18px; background: #fff; box-shadow: 0 12px 35px #51789112; }
+.alternative-copy { padding: 35px 46px 40px; }
+.alternative-label { display: inline-block; margin: 0 0 20px; padding: 5px 10px; border-radius: 30px; background: #edf7fc; color: #517891; font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+.alternative-brand { margin: 0 0 22px; color: #365b72; font-size: 12px; font-weight: 800; letter-spacing: .13em; }
+.alternative-brand span { margin-left: 8px; color: #8ca7b6; font-size: 11px; font-weight: 500; letter-spacing: 0; }
+.alternative-copy h2 { margin: 0; color: #203b4d; font-size: clamp(27px, 3vw, 38px); line-height: 1.35; letter-spacing: -.05em; }
+.alternative-copy h2 em { color: #517891; font-style: normal; }
+.alternative-description { margin: 16px 0 24px; color: #718899; font-size: 14px; }
+.alternative-link { display: inline-flex; gap: 24px; align-items: center; padding: 11px 16px; border-radius: 7px; background: #517891; color: #fff; font-size: 12px; font-weight: 700; text-decoration: none; }
+.alternative-link:hover { background: #365b72; }
+.alternative-link:focus-visible { outline: 3px solid #57b9ff; outline-offset: 3px; }
+.alternative-art { position: relative; overflow: hidden; background: linear-gradient(160deg, #dff4ff 0%, #90d5ff 100%); }
+.alternative-sun { position: absolute; width: 116px; height: 116px; top: 56px; right: 17%; border-radius: 50%; background: #ffffff8c; }
+.alternative-horizon { position: absolute; inset: 48% -20% -30%; border-radius: 50% 50% 0 0; background: #77b1d4; transform: rotate(-8deg); }
+.alternative-shore { position: absolute; inset: 68% -20% -20%; border-radius: 50% 50% 0 0; background: #517891; transform: rotate(7deg); }
+.alternative-art-caption { position: absolute; left: 30px; bottom: 28px; display: flex; flex-direction: column; color: #fff; }
+.alternative-art-caption span { font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.alternative-art-caption strong { margin-top: 5px; font-size: 16px; }
+@media (max-width: 750px) {
+    .alternative-hero { padding: 24px 20px; }
+    .alternative-hero-inner { grid-template-columns: 1fr; }
+    .alternative-copy { padding: 28px; }
+    .alternative-art { min-height: 180px; }
+    .alternative-sun { width: 76px; height: 76px; top: 25px; }
+}
+
+/* 간결한 사이트 헤더 */
+.site-header { background: #fff; border-bottom: 1px solid #dceaf1; }
+.site-header-inner { max-width: 1120px; margin: 0 auto; min-height: 104px; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-brand { display: inline-flex; align-items: center; gap: 14px; color: #203b4d; text-decoration: none; }
+.site-brand:focus-visible { outline: 3px solid #57b9ff; outline-offset: 5px; }
+.site-brand-icon { display: grid; place-items: center; width: 52px; height: 52px; flex: none; border: 1px solid #b7d7e7; border-radius: 10px; background: #edf8ff; color: #517891; font-size: 38px; font-weight: 700; line-height: 1; }
+.site-brand-text { display: flex; flex-direction: column; line-height: 1.25; }
+.site-brand-text strong { font-size: 24px; letter-spacing: -.04em; }
+.site-brand-text small { margin-top: 5px; color: #517891; font-size: 10px; font-weight: 800; letter-spacing: .16em; }
+.site-header-description { margin: 0; color: #517891; font-size: 13px; }
+@media (max-width: 600px) {
+    .site-header-inner { min-height: 86px; padding: 16px 20px; }
+    .site-brand-icon { width: 45px; height: 45px; font-size: 32px; }
+    .site-brand-text strong { font-size: 21px; }
+    .site-header-description { display: none; }
+}
