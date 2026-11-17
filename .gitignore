@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+*.log
+
+# 로컬 환경 변수
+.env
