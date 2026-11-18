@@ -6,6 +6,7 @@
     <title>방갈로 현황 | 방갈로 나우</title>
     <link rel="stylesheet" th:href="@{/css/bungalow-status.css}" href="/css/bungalow-status.css">
     <link rel="stylesheet" th:href="@{/css/header-example.css}" href="/css/header-example.css">
+    <link rel="stylesheet" th:href="@{/css/room-grid.css}" href="/css/room-grid.css">
 </head>
 <body>
 <header class="site-header">
@@ -14,30 +15,25 @@
             <span class="site-brand-icon" aria-hidden="true">≈</span>
             <span class="site-brand-text"><strong>방갈로 나우</strong><small>BUNGALOW NOW</small></span>
         </a>
-        <p class="site-header-description">바다 곁 방갈로 현황을 한눈에 확인하세요.</p>
+        <p class="site-header-description">바다낚시터 방갈로 현황을 한눈에 확인하세요.</p>
     </div>
 </header>
 <main>
     <section class="section status-section" aria-labelledby="status-title">
         <div class="section-heading">
-            <div><p class="section-label">BUNGALOW STATUS</p><h2 id="status-title">객실 현황</h2><p class="section-description">방갈로별 이용 상태를 확인해 보세요.</p></div>
+            <div><p class="section-label">BUNGALOW STATUS</p><h2 id="status-title">방갈로 현황</h2><p class="section-description">방갈로별 이용 상태를 확인해 보세요.</p></div>
             <span class="demo-label">예시 데이터</span>
         </div>
         <div class="summary" aria-label="객실 현황 요약, 예시 데이터">
-            <div><span>전체 객실</span><strong><b th:text="${totalCount}">6</b><small>실</small></strong></div>
-            <div><span><i class="dot available"></i>이용 가능</span><strong><b th:text="${availableCount}">3</b><small>실</small></strong></div>
-            <div><span><i class="dot occupied"></i>이용 중</span><strong><b th:text="${occupiedCount}">2</b><small>실</small></strong></div>
-            <div><span><i class="dot maintenance"></i>점검 중</span><strong><b th:text="${maintenanceCount}">1</b><small>실</small></strong></div>
+            <div><span>전체 객실</span><strong><b th:text="${totalCount}">30</b><small>실</small></strong></div>
+            <div><span><i class="dot available"></i>이용 가능</span><strong><b th:text="${availableCount}">20</b><small>실</small></strong></div>
+            <div><span><i class="dot occupied"></i>이용 중</span><strong><b th:text="${occupiedCount}">8</b><small>실</small></strong></div>
+            <div><span><i class="dot maintenance"></i>점검 중</span><strong><b th:text="${maintenanceCount}">2</b><small>실</small></strong></div>
         </div>
         <div class="room-grid">
             <article class="room-card" th:each="room : ${rooms}">
-                <div class="room-top">
-                    <span class="room-number" th:text="|BUNGALOW ${room.number}|">BUNGALOW 01</span>
-                    <span class="badge badge-available" th:class="|badge badge-${room.statusClass}|" th:text="${room.status}">이용 가능</span>
-                </div>
                 <h3 th:text="|${room.number}번 방갈로|">01번 방갈로</h3>
-                <p>바다 가까이에서 편안한 휴식</p>
-                <div class="room-bottom"><span>객실 상태</span><strong th:text="${room.status}">이용 가능</strong></div>
+                <span class="badge badge-available" th:class="|badge badge-${room.statusClass}|" th:text="${room.status}">이용 가능</span>
             </article>
         </div>
         <p class="data-note">※ 현재 표시된 객실과 상태는 화면 구성을 위한 예시입니다.</p>
@@ -45,7 +41,7 @@
     <section class="section guide-section" aria-labelledby="guide-title">
         <div class="section-heading"><div><p class="section-label">A LITTLE REST BY THE SEA</p><h2 id="guide-title">방갈로 안내</h2><p class="section-description">바다 곁에서 보내는 여유로운 하루를 만나보세요.</p></div><span class="section-index">01 / 02</span></div>
         <div class="image-placeholder" role="img" aria-label="방갈로 사진이 들어갈 임시 이미지 영역"><div class="placeholder-icon" aria-hidden="true">⌁</div><strong>방갈로 이미지</strong><span>사진이 준비되면 이곳에 담을게요</span></div>
-        <div class="guide-info"><div><p class="section-label">ABOUT BUNGALOW</p><h3>바다를 가까이,<br>쉼은 더 편안하게.</h3></div><div class="guide-copy"><p>낚시와 휴식을 함께 즐길 수 있는 방갈로 공간입니다.</p><p>이용 시간과 시설 정보는 운영 안내가 준비되면 이곳에서 확인할 수 있습니다.</p><div class="guide-detail"><span>이용 시간</span><strong>안내 준비 중</strong></div><div class="guide-detail"><span>시설 정보</span><strong>안내 준비 중</strong></div></div></div>
+        <div class="guide-info"><div><p class="section-label">ABOUT BUNGALOW</p><h3>바다낚시터 방갈로 현황<br>쉽고 빠르게 확인하세요</h3></div><div class="guide-copy"><p>낚시와 휴식을 함께 즐길 수 있는 방갈로 공간입니다.</p><p>이용 시간과 시설 정보는 운영 안내가 준비되면 이곳에서 확인할 수 있습니다.</p><div class="guide-detail"><span>이용 시간</span><strong>안내 준비 중</strong></div><div class="guide-detail"><span>시설 정보</span><strong>안내 준비 중</strong></div></div></div>
     </section>
 </main>
 <footer><div><strong>BUNGALOW NOW</strong><span>방갈로 나우 · 바다와 함께 머무는 시간</span></div><p>방갈로 현황 및 운영 관리</p></footer>
